@@ -1,6 +1,6 @@
 <div align=center>
 
-[![React Scrollie - Scroll listener React component that provide scrolling info to children as render prop.](banner.svg)](https://github.com/rmariuzzo/react-scrollie)
+[![React Scrollie - Scroll listener React component that provide scrolling info to children as render prop.](.github/banner.svg)](https://github.com/rmariuzzo/react-scrollie)
 
 </div>
 
@@ -37,6 +37,7 @@ const Demo = () => (
   </Scrollie>
 )
 ```
+[![Edit React Scrollie Demo](.github/demo.svg)](https://codesandbox.io/s/rlm0o580xm)
 
 When **`<Scrollie />`** is mounted it will start to listen to scroll events and will execute the `children` render prop providing info about scroll position.
 
