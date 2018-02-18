@@ -1,6 +1,6 @@
 <div align=center>
 
-[![React Scrollie - Scroll listener React component that provide scrolling info to children as render prop.](banner.svg)](http://google.com)
+[![React Scrollie - Scroll listener React component that provide scrolling info to children as render prop.](banner.svg)](https://github.com/rmariuzzo/react-scrollie)
 
 </div>
 
