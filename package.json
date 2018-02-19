@@ -1,6 +1,6 @@
 {
   "name": "react-scrollie",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scroll listener React component that provide scrolling info to children as render prop.",
   "jsnext:main": "src/ReactScrollie.js",
   "main": "dist/ReactScrollie.js",
