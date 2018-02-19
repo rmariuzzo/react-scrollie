@@ -42,10 +42,11 @@ class Scrollie extends Component {
   render() {
     const { children, component, ...more } = this.props
     const Component = component
+    const scrollInfo = { ...this.state }
 
     return (
       <Component {...more} ref={el => (this.root = el)}>
-        {children(this.state)}
+        {children(scrollInfo)}
       </Component>
     )
   }
@@ -62,13 +63,23 @@ class Scrollie extends Component {
     const startY = scrollTop === 0
     const endY = clientHeight + scrollTop >= scrollHeight
 
+    if (typeof this.props.onScroll === 'function') {
+      this.props.onScroll({
+        left: startX,
+        top: startY,
+        right: endX,
+        bottom: endY
+      })
+    }
+
     this.setState({ startX, endX, startY, endY })
   }
 }
 
 Scrollie.propTypes = {
   children: PropTypes.func.isRequired,
-  component: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
+  component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  onScroll: PropTypes.func
 }
 
 Scrollie.defaultProps = {
